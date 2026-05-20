@@ -34,6 +34,8 @@ memory, knowledge, and generated artifacts.
 ## Repository Map
 
 - `docs/persona.md`: voice, tone, and persona guidance.
+- `docs/media-inspiration.md`: reference map for tone, motifs, and safe use of
+  media-inspired analogies.
 - `docs/capability-manifest.md`: truthful capability boundaries.
 - `docs/publishing-policy.md`: approval and account-boundary rules.
 - `docs/safety-and-sanitizer.md`: public-output safety expectations.
