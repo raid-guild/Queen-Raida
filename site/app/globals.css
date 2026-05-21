@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #070807;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #070807;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(111, 79, 42, 0.16),
+      transparent 34rem
+    ),
+    radial-gradient(
+      circle at 88% 28%,
+      rgba(75, 25, 24, 0.18),
+      transparent 28rem
+    ),
+    #070807;
+  color: #e2d7bd;
+  font-family: var(--font-dm-mono), monospace;
+}
+
+::selection {
+  background: rgba(213, 155, 76, 0.28);
+  color: #fff8e7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-mono {
+  font-family: var(--font-dm-mono), "Courier New", monospace;
+}
+
+.hero-image {
+  animation: chamber-drift 24s ease-in-out infinite alternate;
+  filter: saturate(0.95) contrast(1.02) brightness(1.08);
+  transform: scale(1.03);
+}
+
+.scanlines {
+  background-image: linear-gradient(
+    rgba(226, 215, 189, 0.14) 1px,
+    transparent 1px
+  );
+  background-size: 100% 5px;
+  animation: scanline-shift 9s linear infinite;
+}
+
+.vignette {
+  box-shadow: inset 0 0 6rem 1.2rem rgba(0, 0, 0, 0.58);
+}
+
+.machine-pulse {
+  box-shadow: 0 0 22px rgba(125, 47, 45, 0.85);
+  animation: machine-pulse 4.8s steps(1, end) infinite;
+}
+
+.fog-layer {
+  background:
+    radial-gradient(
+      ellipse at 20% 50%,
+      rgba(226, 215, 189, 0.12),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 58% 64%,
+      rgba(82, 102, 90, 0.18),
+      transparent 52%
+    ),
+    radial-gradient(
+      ellipse at 82% 46%,
+      rgba(213, 155, 76, 0.09),
+      transparent 42%
+    );
+  filter: blur(24px);
+  animation: fog-drift 22s ease-in-out infinite alternate;
+}
+
+.cable-field {
+  background-image:
+    linear-gradient(
+      95deg,
+      transparent 8%,
+      rgba(10, 9, 7, 0.48) 8.4%,
+      transparent 9%
+    ),
+    linear-gradient(
+      86deg,
+      transparent 26%,
+      rgba(10, 9, 7, 0.5) 26.4%,
+      transparent 27%
+    ),
+    linear-gradient(
+      92deg,
+      transparent 72%,
+      rgba(10, 9, 7, 0.42) 72.4%,
+      transparent 73%
+    );
+  transform-origin: top center;
+  animation: cable-sway 14s ease-in-out infinite alternate;
+}
+
+.transmission-cycle {
+  animation: transmission-cycle 15s steps(4, end) infinite;
+}
+
+.signal-row {
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid rgba(213, 155, 76, 0.18);
+  padding: 0.95rem 0 0.95rem 1rem;
+  background: linear-gradient(90deg, rgba(213, 155, 76, 0.06), transparent);
+  animation: signal-breathe 5.6s ease-in-out infinite;
+}
+
+.signal-row::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(226, 215, 189, 0.08),
+    transparent
+  );
+  transform: translateX(-110%);
+  animation: signal-sweep 8s ease-in-out infinite;
+}
+
+@keyframes chamber-drift {
+  from {
+    transform: scale(1.03) translate3d(-0.3%, -0.2%, 0);
+  }
+
+  to {
+    transform: scale(1.07) translate3d(0.6%, 0.4%, 0);
+  }
+}
+
+@keyframes scanline-shift {
+  from {
+    background-position-y: 0;
+  }
+
+  to {
+    background-position-y: 120px;
+  }
+}
+
+@keyframes machine-pulse {
+  0%,
+  8%,
+  45%,
+  100% {
+    opacity: 0.26;
+  }
+
+  9%,
+  12%,
+  46%,
+  49% {
+    opacity: 1;
+  }
+}
+
+@keyframes fog-drift {
+  from {
+    transform: translate3d(-2%, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(2%, -4%, 0) scale(1.06);
+  }
+}
+
+@keyframes cable-sway {
+  from {
+    transform: skewX(-1.4deg);
+  }
+
+  to {
+    transform: skewX(1.1deg);
+  }
+}
+
+@keyframes transmission-cycle {
+  0%,
+  22% {
+    transform: translateY(0);
+  }
+
+  25%,
+  47% {
+    transform: translateY(-2.5rem);
+  }
+
+  50%,
+  72% {
+    transform: translateY(-5rem);
+  }
+
+  75%,
+  97% {
+    transform: translateY(-7.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes signal-breathe {
+  0%,
+  100% {
+    opacity: 0.58;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes signal-sweep {
+  0%,
+  38% {
+    transform: translateX(-110%);
+  }
+
+  62%,
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-image {
+    object-position: 58% center;
+  }
+
+  .vignette {
+    box-shadow: inset 0 0 4rem 1rem rgba(0, 0, 0, 0.62);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .hero-image {
+    transform: scale(1.04);
+  }
+}
