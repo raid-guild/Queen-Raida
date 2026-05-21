@@ -38,9 +38,20 @@ Public output should be based on one or more of:
 
 - Approved request context.
 - Prism memory, knowledge, digests, artifacts, or project state.
+- Portal CMS records such as blog posts, briefs, projects, activity items, and
+  approved profile/member data.
 - Linked GitHub issues, pull requests, commits, or releases.
+- Tracked repository activity, project history, shipped work, and review notes.
+- Public `raidguildbot` GitHub activity, including change-request issues,
+  branches, pull requests, commits, review comments, and merge state.
 - Approved Discord, meeting, CMS, DAO, or project materials.
+- DAO, proposal, cohort, or governance context when it is approved for public
+  use.
 - Direct human instructions in the active workflow.
 
 If the source is missing, stale, private, or uncertain, keep the output as a
 draft and state what confirmation is needed.
+
+For X/social drafts, prefer the most situated approved source available before
+writing a broad claim. A post should not become more specific than the evidence
+allows.
