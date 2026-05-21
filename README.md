@@ -43,6 +43,16 @@ memory, knowledge, and generated artifacts.
 - `docs/safety-and-sanitizer.md`: public-output safety expectations.
 - `docs/workflows.md`: how Prism-owned runtime state relates to this repo.
 - `examples/x-posts.md`: public examples and canonical X references.
+- `site/`: standalone Next.js landing page for Queen Raida.
+- `site/README.md`: local setup, checks, site structure, and creative
+  constraints.
+- `site/DIRECTION_DOC.md`: Phase 1 website creative direction and image prompt.
+- `site/PLAN.md`: implementation plan and verification checklist for the
+  landing page.
+- `site/app/` and `site/components/`: website routes, global styles, and UI
+  components.
+- `site/public/images/queen-raida-throne-chamber.png`: generated hero image for
+  the landing page.
 - `assets/queen-raida-avatar-reference.png`: reference image for avatar and
   visual identity work.
 - `ops/env.example`: placeholder environment variable names only.
