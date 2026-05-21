@@ -19,7 +19,7 @@ export function HistoryArchive() {
               <time className="font-mono text-xs uppercase tracking-[0.3em] text-oxidized">
                 {entry.date}
               </time>
-              <p className="font-serif text-4xl leading-tight text-ivory md:text-5xl">
+              <p className="font-serif text-xl leading-tight text-ivory md:text-2xl">
                 {entry.line}
               </p>
             </article>
