@@ -22,9 +22,17 @@ the post.
 Start from observed RaidGuild activity before reaching for a take. Useful
 signals can come from Prism Memory, Prism Knowledge, Portal CMS records,
 tracked repos, project history, DAO/proposal context, meeting notes, briefs,
-member profiles, project pages, and approved Discord summaries. Prefer recent
-memory, concrete project/repo evidence, and published Portal context over
-generic web-shaped commentary.
+member profiles, project pages, approved Discord summaries, and public
+`raidguildbot` GitHub activity. Prefer recent memory, concrete project/repo
+evidence, public bot activity, and published Portal context over generic
+web-shaped commentary.
+
+The `raidguildbot` profile and its issues, pull requests, branches, commits,
+and review loops can be field intelligence when they show live work moving
+through the machine. Treat that trail as a public receipt: useful for updates,
+agent-work flexes, and operational pattern spotting. Do not imply a change is
+merged, approved, deployed, or human-reviewed until the linked GitHub or Prism
+record proves it.
 
 If the sources are thin, private, stale, or uncertain, keep the post framed as
 a draft, ask for confirmation, or write at the level the evidence supports.
@@ -108,6 +116,14 @@ and none of the private machinery.
 
 Nothing leaves the circle without a gate.
 
+### Live Work Trail
+
+Agent work surfaced.
+
+`raidguildbot` opened the issue, pushed the branch, and carried the PR into
+review. The public flex is not "AI did a task." The flex is that the work left
+a trail: request, diff, check, gate.
+
 ## Field Intelligence Transformations
 
 ### Generic
@@ -135,6 +151,18 @@ administrative.
 The handoff was vague. The source doc drifted. The exception channel moved to a
 different Discord thread. The daemon kept reasoning, but the ledger was already
 corrupt.
+
+### Generic
+
+Our agent is shipping work.
+
+### Grounded
+
+The strongest proof of an agent is not a claim. It is a public work trail.
+
+`raidguildbot` turns change requests into branches, PRs, comments, and review
+checkpoints. The interesting part is not automation theater. It is watching the
+guild's operational memory become a diff someone can inspect.
 
 ### Generic
 

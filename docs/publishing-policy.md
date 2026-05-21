@@ -42,6 +42,8 @@ Public output should be based on one or more of:
   approved profile/member data.
 - Linked GitHub issues, pull requests, commits, or releases.
 - Tracked repository activity, project history, shipped work, and review notes.
+- Public `raidguildbot` GitHub activity, including change-request issues,
+  branches, pull requests, commits, review comments, and merge state.
 - Approved Discord, meeting, CMS, DAO, or project materials.
 - DAO, proposal, cohort, or governance context when it is approved for public
   use.
