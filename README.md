@@ -36,11 +36,15 @@ memory, knowledge, and generated artifacts.
 - `docs/persona.md`: voice, tone, and persona guidance.
 - `docs/media-inspiration.md`: reference map for tone, motifs, and safe use of
   media-inspired analogies.
+- `docs/visual-design-prompt.md`: avatar and visual identity prompt guidance.
+- `docs/video-prompt.md`: motion and broadcast video prompt guidance.
 - `docs/capability-manifest.md`: truthful capability boundaries.
 - `docs/publishing-policy.md`: approval and account-boundary rules.
 - `docs/safety-and-sanitizer.md`: public-output safety expectations.
 - `docs/workflows.md`: how Prism-owned runtime state relates to this repo.
 - `examples/x-posts.md`: public examples and canonical X references.
+- `assets/queen-raida-avatar-reference.png`: reference image for avatar and
+  visual identity work.
 - `ops/env.example`: placeholder environment variable names only.
 
 ## Operating Principle
