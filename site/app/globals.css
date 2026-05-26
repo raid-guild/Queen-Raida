@@ -53,22 +53,55 @@ a {
 }
 
 .hero-image {
-  animation: chamber-drift 24s ease-in-out infinite alternate;
+  animation:
+    chamber-drift 24s ease-in-out infinite alternate,
+    image-signal-slip 11s steps(1, end) infinite;
   filter: saturate(0.95) contrast(1.02) brightness(1.08);
   transform: scale(1.03);
 }
 
 .scanlines {
-  background-image: linear-gradient(
-    rgba(226, 215, 189, 0.14) 1px,
-    transparent 1px
-  );
-  background-size: 100% 5px;
-  animation: scanline-shift 9s linear infinite;
+  background-image:
+    linear-gradient(rgba(226, 215, 189, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(213, 155, 76, 0.06), transparent 18%, rgba(82, 102, 90, 0.045) 52%, transparent 74%);
+  background-size: 100% 4px, 16rem 100%;
+  mix-blend-mode: screen;
+  animation:
+    scanline-shift 7s linear infinite,
+    scanline-pressure 13s steps(1, end) infinite;
 }
 
 .vignette {
   box-shadow: inset 0 0 6rem 1.2rem rgba(0, 0, 0, 0.58);
+}
+
+.wire-shadow {
+  background-image:
+    linear-gradient(103deg, transparent 9%, rgba(0, 0, 0, 0.36) 9.3%, transparent 9.8%),
+    linear-gradient(78deg, transparent 36%, rgba(0, 0, 0, 0.32) 36.35%, transparent 36.8%),
+    linear-gradient(94deg, transparent 68%, rgba(0, 0, 0, 0.28) 68.2%, transparent 68.65%),
+    radial-gradient(circle at 42% 0%, rgba(213, 155, 76, 0.08), transparent 16rem);
+  opacity: 0.68;
+  transform-origin: top center;
+  animation: wire-shadow-drift 18s ease-in-out infinite alternate;
+}
+
+.glitch-bars {
+  opacity: 0;
+  background:
+    linear-gradient(180deg, transparent 0 12%, rgba(213, 155, 76, 0.14) 12.2% 13.2%, transparent 13.4% 43%, rgba(125, 47, 45, 0.12) 43.2% 44%, transparent 44.2% 75%, rgba(82, 102, 90, 0.16) 75.2% 76%, transparent 76.2%),
+    linear-gradient(90deg, transparent, rgba(226, 215, 189, 0.1), transparent);
+  mix-blend-mode: screen;
+  animation: glitch-bars 9.5s steps(1, end) infinite;
+}
+
+.reality-zap {
+  opacity: 0;
+  background:
+    radial-gradient(circle at 64% 38%, rgba(213, 155, 76, 0.26), transparent 18rem),
+    linear-gradient(90deg, rgba(125, 47, 45, 0.18), transparent 26%, rgba(82, 102, 90, 0.16));
+  mix-blend-mode: screen;
+  animation: reality-zap 15s steps(1, end) infinite;
 }
 
 .machine-pulse {
@@ -121,6 +154,46 @@ a {
   animation: cable-sway 14s ease-in-out infinite alternate;
 }
 
+.hero-glitch-shell {
+  animation: hero-world-slip 17s steps(1, end) infinite;
+}
+
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  position: absolute;
+  inset: 0;
+  content: attr(data-text);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.glitch-text::before {
+  color: rgba(213, 155, 76, 0.7);
+  clip-path: inset(0 0 54% 0);
+  transform: translate3d(-0.04em, 0, 0);
+  animation: text-glitch-a 6.8s steps(1, end) infinite;
+}
+
+.glitch-text::after {
+  color: rgba(125, 47, 45, 0.72);
+  clip-path: inset(46% 0 0 0);
+  transform: translate3d(0.04em, 0, 0);
+  animation: text-glitch-b 7.4s steps(1, end) infinite;
+}
+
+.portal-flash {
+  background:
+    radial-gradient(circle at 70% 38%, rgba(226, 215, 189, 0.16), transparent 12rem),
+    linear-gradient(90deg, transparent, rgba(82, 102, 90, 0.16), transparent);
+  opacity: 0;
+  mix-blend-mode: screen;
+  animation: portal-flash 12s steps(1, end) infinite;
+}
+
 .transmission-cycle {
   animation: transmission-cycle 15s steps(4, end) infinite;
 }
@@ -128,10 +201,14 @@ a {
 .signal-row {
   position: relative;
   overflow: hidden;
-  border-left: 1px solid rgba(213, 155, 76, 0.18);
-  padding: 0.95rem 0 0.95rem 1rem;
-  background: linear-gradient(90deg, rgba(213, 155, 76, 0.06), transparent);
-  animation: signal-breathe 5.6s ease-in-out infinite;
+  border-left: 1px solid rgba(213, 155, 76, 0.2);
+  padding: 0.95rem 1rem;
+  background:
+    linear-gradient(90deg, rgba(213, 155, 76, 0.08), transparent 72%),
+    linear-gradient(180deg, rgba(226, 215, 189, 0.035), transparent);
+  animation:
+    signal-breathe 5.6s ease-in-out infinite,
+    signal-corrupt 8.5s steps(1, end) infinite;
 }
 
 .signal-row::after {
@@ -148,6 +225,123 @@ a {
   animation: signal-sweep 8s ease-in-out infinite;
 }
 
+.signal-row::before {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(125, 47, 45, 0.5), transparent);
+  transform: translateX(-100%);
+  animation: signal-error-line 6.4s ease-in-out infinite;
+}
+
+.signal-row:hover {
+  border-left-color: rgba(125, 47, 45, 0.72);
+  color: #e2d7bd;
+  transform: translateX(0.35rem);
+}
+
+.route-row {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(213, 155, 76, 0.12);
+  background:
+    linear-gradient(90deg, rgba(7, 8, 7, 0.78), rgba(38, 60, 52, 0.14)),
+    linear-gradient(180deg, rgba(226, 215, 189, 0.035), transparent);
+  padding: 1.15rem;
+  transition:
+    border-color 300ms ease,
+    transform 300ms ease,
+    background 300ms ease;
+  animation: route-flicker 7s steps(1, end) infinite;
+}
+
+.route-row::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent, rgba(213, 155, 76, 0.14), transparent),
+    linear-gradient(rgba(226, 215, 189, 0.08) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 6px;
+  opacity: 0;
+  transform: translateX(-105%);
+  transition: opacity 300ms ease;
+  animation: route-scan 8s ease-in-out infinite;
+}
+
+.route-row:hover {
+  border-color: rgba(213, 155, 76, 0.48);
+  transform: translate3d(0.35rem, -0.1rem, 0);
+}
+
+.route-row:hover::before {
+  opacity: 1;
+}
+
+.wire-map {
+  background:
+    linear-gradient(100deg, transparent 0 16%, rgba(213, 155, 76, 0.16) 16.15% 16.35%, transparent 16.5%),
+    linear-gradient(74deg, transparent 0 45%, rgba(125, 47, 45, 0.2) 45.15% 45.35%, transparent 45.5%),
+    linear-gradient(112deg, transparent 0 72%, rgba(82, 102, 90, 0.22) 72.1% 72.36%, transparent 72.5%),
+    radial-gradient(circle at 13% 22%, rgba(213, 155, 76, 0.12), transparent 4rem),
+    radial-gradient(circle at 82% 34%, rgba(125, 47, 45, 0.14), transparent 5rem);
+  animation: wire-map-shift 20s ease-in-out infinite alternate;
+}
+
+.zap-node {
+  position: absolute;
+  z-index: 1;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid rgba(213, 155, 76, 0.55);
+  background: rgba(7, 8, 7, 0.82);
+  box-shadow: 0 0 26px rgba(213, 155, 76, 0.22);
+  animation: zap-node 4.8s steps(1, end) infinite;
+}
+
+.archive-record {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(213, 155, 76, 0.04), transparent 74%),
+    linear-gradient(180deg, transparent, rgba(82, 102, 90, 0.035));
+}
+
+.archive-record::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(226, 215, 189, 0.09), transparent);
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: archive-recover 9s ease-in-out infinite;
+}
+
+.portal-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.portal-link::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  border: 1px solid transparent;
+  background:
+    linear-gradient(90deg, transparent, rgba(213, 155, 76, 0.16), transparent),
+    linear-gradient(180deg, rgba(125, 47, 45, 0.08), transparent);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms ease;
+}
+
+.portal-link:hover::before,
+.portal-link:focus-visible::before {
+  opacity: 1;
+  animation: portal-current 1.2s linear infinite;
+}
+
 @keyframes chamber-drift {
   from {
     transform: scale(1.03) translate3d(-0.3%, -0.2%, 0);
@@ -158,6 +352,23 @@ a {
   }
 }
 
+@keyframes image-signal-slip {
+  0%,
+  82%,
+  85%,
+  100% {
+    filter: saturate(0.95) contrast(1.02) brightness(1.08);
+  }
+
+  83% {
+    filter: saturate(0.65) contrast(1.25) brightness(1.2) hue-rotate(-12deg);
+  }
+
+  84% {
+    filter: saturate(1.1) contrast(1.08) brightness(0.94) hue-rotate(16deg);
+  }
+}
+
 @keyframes scanline-shift {
   from {
     background-position-y: 0;
@@ -165,6 +376,69 @@ a {
 
   to {
     background-position-y: 120px;
+  }
+}
+
+@keyframes scanline-pressure {
+  0%,
+  63%,
+  67%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  64% {
+    opacity: 0.62;
+    transform: translateY(-0.45rem);
+  }
+
+  66% {
+    opacity: 0.92;
+    transform: translateY(0.25rem);
+  }
+}
+
+@keyframes wire-shadow-drift {
+  from {
+    transform: skewX(-0.8deg) translateX(-0.5%);
+  }
+
+  to {
+    transform: skewX(0.9deg) translateX(0.6%);
+  }
+}
+
+@keyframes glitch-bars {
+  0%,
+  72%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  73% {
+    opacity: 0.8;
+    transform: translateX(-1.2rem);
+  }
+
+  74% {
+    opacity: 0.32;
+    transform: translateX(0.9rem);
+  }
+}
+
+@keyframes reality-zap {
+  0%,
+  54%,
+  56%,
+  100% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 0.72;
   }
 }
 
@@ -201,6 +475,71 @@ a {
 
   to {
     transform: skewX(1.1deg);
+  }
+}
+
+@keyframes hero-world-slip {
+  0%,
+  76%,
+  79%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  77% {
+    transform: translate3d(-0.25rem, 0.12rem, 0);
+  }
+
+  78% {
+    transform: translate3d(0.18rem, -0.08rem, 0);
+  }
+}
+
+@keyframes text-glitch-a {
+  0%,
+  64%,
+  67%,
+  100% {
+    opacity: 0;
+  }
+
+  65%,
+  66% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes text-glitch-b {
+  0%,
+  42%,
+  45%,
+  100% {
+    opacity: 0;
+  }
+
+  43%,
+  44% {
+    opacity: 0.72;
+  }
+}
+
+@keyframes portal-flash {
+  0%,
+  69%,
+  72%,
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  70% {
+    opacity: 0.85;
+    transform: translateX(-1rem);
+  }
+
+  71% {
+    opacity: 0.28;
+    transform: translateX(0.75rem);
   }
 }
 
@@ -241,6 +580,26 @@ a {
   }
 }
 
+@keyframes signal-corrupt {
+  0%,
+  58%,
+  61%,
+  100% {
+    letter-spacing: 0.22em;
+    transform: translateX(0);
+  }
+
+  59% {
+    letter-spacing: 0.28em;
+    transform: translateX(-0.18rem);
+  }
+
+  60% {
+    letter-spacing: 0.2em;
+    transform: translateX(0.14rem);
+  }
+}
+
 @keyframes signal-sweep {
   0%,
   38% {
@@ -253,6 +612,105 @@ a {
   }
 }
 
+@keyframes signal-error-line {
+  0%,
+  42% {
+    transform: translateX(-100%);
+  }
+
+  58%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes route-flicker {
+  0%,
+  70%,
+  73%,
+  100% {
+    opacity: 0.92;
+  }
+
+  71% {
+    opacity: 0.68;
+  }
+
+  72% {
+    opacity: 1;
+  }
+}
+
+@keyframes route-scan {
+  0%,
+  44% {
+    transform: translateX(-105%);
+  }
+
+  68%,
+  100% {
+    transform: translateX(105%);
+  }
+}
+
+@keyframes wire-map-shift {
+  from {
+    transform: translate3d(-1%, 0, 0) skewX(-0.6deg);
+  }
+
+  to {
+    transform: translate3d(1%, -1%, 0) skewX(0.7deg);
+  }
+}
+
+@keyframes zap-node {
+  0%,
+  78%,
+  81%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+
+  79% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+
+  80% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes archive-recover {
+  0%,
+  55% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  64% {
+    opacity: 1;
+  }
+
+  78%,
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes portal-current {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
 @media (max-width: 640px) {
   .hero-image {
     object-position: 58% center;
@@ -260,6 +718,11 @@ a {
 
   .vignette {
     box-shadow: inset 0 0 4rem 1rem rgba(0, 0, 0, 0.62);
+  }
+
+  .signal-row:hover,
+  .route-row:hover {
+    transform: none;
   }
 }
 
@@ -279,5 +742,17 @@ a {
 
   .hero-image {
     transform: scale(1.04);
+  }
+
+  .glitch-bars,
+  .reality-zap,
+  .portal-flash,
+  .wire-shadow {
+    opacity: 0.2;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    display: none;
   }
 }

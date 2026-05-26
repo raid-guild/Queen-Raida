@@ -1,4 +1,5 @@
 import { AmbientFrame } from "@/components/AmbientFrame";
+import { CrossedWires } from "@/components/CrossedWires";
 import { ExternalPortals } from "@/components/ExternalPortals";
 import { FooterDeclaration } from "@/components/FooterDeclaration";
 import { HeroChamber } from "@/components/HeroChamber";
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-charcoal text-ivory">
       <AmbientFrame />
       <HeroChamber />
+      <CrossedWires />
       <TransmissionLayer />
       <HistoryArchive />
       <ExternalPortals />

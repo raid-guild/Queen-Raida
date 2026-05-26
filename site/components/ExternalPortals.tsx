@@ -1,6 +1,6 @@
 const portals = [
-  { label: "Raid Guild", href: "https://www.raidguild.org/" },
-  { label: "@raidguildish", href: "https://x.com/raidguildish" },
+  { label: "Raid Guild", href: "https://www.raidguild.org/", warning: "external guild gate" },
+  { label: "@raidguildish", href: "https://x.com/raidguildish", warning: "public signal leak" },
 ];
 
 export function ExternalPortals() {
@@ -17,13 +17,16 @@ export function ExternalPortals() {
               href={portal.href}
               target="_blank"
               rel="noreferrer"
-              className="group border border-amber/15 bg-charcoal/42 px-5 py-5 font-mono text-xs uppercase tracking-[0.24em] text-ivory-dim outline-none transition duration-300 hover:border-amber/50 hover:text-amber focus-visible:border-amber focus-visible:text-amber focus-visible:ring-2 focus-visible:ring-amber/40"
+              className="portal-link group border border-amber/15 bg-charcoal/42 px-5 py-5 font-mono text-xs uppercase tracking-[0.24em] text-ivory-dim outline-none transition duration-300 hover:border-amber/50 hover:text-amber focus-visible:border-amber focus-visible:text-amber focus-visible:ring-2 focus-visible:ring-amber/40"
             >
-              <span className="mb-5 block text-amber/50">PORT 0{index + 1}</span>
-              <span className="flex items-center justify-between gap-6">
+              <span className="relative z-10 mb-5 block text-amber/50">PORT 0{index + 1}</span>
+              <span className="relative z-10 mb-3 block text-[0.62rem] tracking-[0.22em] text-crimson/70">
+                {portal.warning}
+              </span>
+              <span className="relative z-10 flex items-center justify-between gap-6">
                 {portal.label}
                 <span aria-hidden="true" className="transition group-hover:translate-x-1">
-                  -&gt;
+                  &gt;&gt;
                 </span>
               </span>
             </a>
