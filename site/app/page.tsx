@@ -4,6 +4,7 @@ import { ExternalPortals } from "@/components/ExternalPortals";
 import { FooterDeclaration } from "@/components/FooterDeclaration";
 import { HeroChamber } from "@/components/HeroChamber";
 import { HistoryArchive } from "@/components/HistoryArchive";
+import { NewsIndex } from "@/components/NewsIndex";
 import { TransmissionLayer } from "@/components/TransmissionLayer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroChamber />
       <CrossedWires />
       <TransmissionLayer />
+      <NewsIndex />
       <HistoryArchive />
       <ExternalPortals />
       <FooterDeclaration />
