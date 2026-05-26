@@ -63,8 +63,16 @@ a {
 .scanlines {
   background-image:
     linear-gradient(rgba(226, 215, 189, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(213, 155, 76, 0.06), transparent 18%, rgba(82, 102, 90, 0.045) 52%, transparent 74%);
-  background-size: 100% 4px, 16rem 100%;
+    linear-gradient(
+      90deg,
+      rgba(213, 155, 76, 0.06),
+      transparent 18%,
+      rgba(82, 102, 90, 0.045) 52%,
+      transparent 74%
+    );
+  background-size:
+    100% 4px,
+    16rem 100%;
   mix-blend-mode: screen;
   animation:
     scanline-shift 7s linear infinite,
@@ -77,10 +85,29 @@ a {
 
 .wire-shadow {
   background-image:
-    linear-gradient(103deg, transparent 9%, rgba(0, 0, 0, 0.36) 9.3%, transparent 9.8%),
-    linear-gradient(78deg, transparent 36%, rgba(0, 0, 0, 0.32) 36.35%, transparent 36.8%),
-    linear-gradient(94deg, transparent 68%, rgba(0, 0, 0, 0.28) 68.2%, transparent 68.65%),
-    radial-gradient(circle at 42% 0%, rgba(213, 155, 76, 0.08), transparent 16rem);
+    linear-gradient(
+      103deg,
+      transparent 9%,
+      rgba(0, 0, 0, 0.36) 9.3%,
+      transparent 9.8%
+    ),
+    linear-gradient(
+      78deg,
+      transparent 36%,
+      rgba(0, 0, 0, 0.32) 36.35%,
+      transparent 36.8%
+    ),
+    linear-gradient(
+      94deg,
+      transparent 68%,
+      rgba(0, 0, 0, 0.28) 68.2%,
+      transparent 68.65%
+    ),
+    radial-gradient(
+      circle at 42% 0%,
+      rgba(213, 155, 76, 0.08),
+      transparent 16rem
+    );
   opacity: 0.68;
   transform-origin: top center;
   animation: wire-shadow-drift 18s ease-in-out infinite alternate;
@@ -89,7 +116,16 @@ a {
 .glitch-bars {
   opacity: 0;
   background:
-    linear-gradient(180deg, transparent 0 12%, rgba(213, 155, 76, 0.14) 12.2% 13.2%, transparent 13.4% 43%, rgba(125, 47, 45, 0.12) 43.2% 44%, transparent 44.2% 75%, rgba(82, 102, 90, 0.16) 75.2% 76%, transparent 76.2%),
+    linear-gradient(
+      180deg,
+      transparent 0 12%,
+      rgba(213, 155, 76, 0.14) 12.2% 13.2%,
+      transparent 13.4% 43%,
+      rgba(125, 47, 45, 0.12) 43.2% 44%,
+      transparent 44.2% 75%,
+      rgba(82, 102, 90, 0.16) 75.2% 76%,
+      transparent 76.2%
+    ),
     linear-gradient(90deg, transparent, rgba(226, 215, 189, 0.1), transparent);
   mix-blend-mode: screen;
   animation: glitch-bars 9.5s steps(1, end) infinite;
@@ -98,8 +134,17 @@ a {
 .reality-zap {
   opacity: 0;
   background:
-    radial-gradient(circle at 64% 38%, rgba(213, 155, 76, 0.26), transparent 18rem),
-    linear-gradient(90deg, rgba(125, 47, 45, 0.18), transparent 26%, rgba(82, 102, 90, 0.16));
+    radial-gradient(
+      circle at 64% 38%,
+      rgba(213, 155, 76, 0.26),
+      transparent 18rem
+    ),
+    linear-gradient(
+      90deg,
+      rgba(125, 47, 45, 0.18),
+      transparent 26%,
+      rgba(82, 102, 90, 0.16)
+    );
   mix-blend-mode: screen;
   animation: reality-zap 15s steps(1, end) infinite;
 }
@@ -187,7 +232,11 @@ a {
 
 .portal-flash {
   background:
-    radial-gradient(circle at 70% 38%, rgba(226, 215, 189, 0.16), transparent 12rem),
+    radial-gradient(
+      circle at 70% 38%,
+      rgba(226, 215, 189, 0.16),
+      transparent 12rem
+    ),
     linear-gradient(90deg, transparent, rgba(82, 102, 90, 0.16), transparent);
   opacity: 0;
   mix-blend-mode: screen;
@@ -230,7 +279,12 @@ a {
   inset: auto 0 0 0;
   height: 1px;
   content: "";
-  background: linear-gradient(90deg, transparent, rgba(125, 47, 45, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(125, 47, 45, 0.5),
+    transparent
+  );
   transform: translateX(-100%);
   animation: signal-error-line 6.4s ease-in-out infinite;
 }
@@ -263,7 +317,9 @@ a {
   background:
     linear-gradient(90deg, transparent, rgba(213, 155, 76, 0.14), transparent),
     linear-gradient(rgba(226, 215, 189, 0.08) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 6px;
+  background-size:
+    100% 100%,
+    100% 6px;
   opacity: 0;
   transform: translateX(-105%);
   transition: opacity 300ms ease;
@@ -281,11 +337,34 @@ a {
 
 .wire-map {
   background:
-    linear-gradient(100deg, transparent 0 16%, rgba(213, 155, 76, 0.16) 16.15% 16.35%, transparent 16.5%),
-    linear-gradient(74deg, transparent 0 45%, rgba(125, 47, 45, 0.2) 45.15% 45.35%, transparent 45.5%),
-    linear-gradient(112deg, transparent 0 72%, rgba(82, 102, 90, 0.22) 72.1% 72.36%, transparent 72.5%),
-    radial-gradient(circle at 13% 22%, rgba(213, 155, 76, 0.12), transparent 4rem),
-    radial-gradient(circle at 82% 34%, rgba(125, 47, 45, 0.14), transparent 5rem);
+    linear-gradient(
+      100deg,
+      transparent 0 16%,
+      rgba(213, 155, 76, 0.16) 16.15% 16.35%,
+      transparent 16.5%
+    ),
+    linear-gradient(
+      74deg,
+      transparent 0 45%,
+      rgba(125, 47, 45, 0.2) 45.15% 45.35%,
+      transparent 45.5%
+    ),
+    linear-gradient(
+      112deg,
+      transparent 0 72%,
+      rgba(82, 102, 90, 0.22) 72.1% 72.36%,
+      transparent 72.5%
+    ),
+    radial-gradient(
+      circle at 13% 22%,
+      rgba(213, 155, 76, 0.12),
+      transparent 4rem
+    ),
+    radial-gradient(
+      circle at 82% 34%,
+      rgba(125, 47, 45, 0.14),
+      transparent 5rem
+    );
   animation: wire-map-shift 20s ease-in-out infinite alternate;
 }
 
@@ -312,7 +391,12 @@ a {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(90deg, transparent, rgba(226, 215, 189, 0.09), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(226, 215, 189, 0.09),
+    transparent
+  );
   opacity: 0;
   transform: translateX(-100%);
   animation: archive-recover 9s ease-in-out infinite;
@@ -344,8 +428,16 @@ a {
 
 .news-section {
   background:
-    radial-gradient(circle at 74% 12%, rgba(125, 47, 45, 0.16), transparent 24rem),
-    radial-gradient(circle at 15% 72%, rgba(82, 102, 90, 0.18), transparent 28rem),
+    radial-gradient(
+      circle at 74% 12%,
+      rgba(125, 47, 45, 0.16),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 15% 72%,
+      rgba(82, 102, 90, 0.18),
+      transparent 28rem
+    ),
     #070807;
 }
 
@@ -356,7 +448,11 @@ a {
   border: 1px solid rgba(213, 155, 76, 0.14);
   background:
     linear-gradient(180deg, rgba(7, 8, 7, 0.78), rgba(16, 16, 13, 0.68)),
-    radial-gradient(circle at 85% 12%, rgba(125, 47, 45, 0.12), transparent 12rem);
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(125, 47, 45, 0.12),
+      transparent 12rem
+    );
   padding: 1.35rem;
   outline: none;
   transition:
@@ -379,7 +475,9 @@ a {
   background:
     linear-gradient(90deg, transparent, rgba(213, 155, 76, 0.16), transparent),
     linear-gradient(rgba(226, 215, 189, 0.08) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 6px;
+  background-size:
+    100% 100%,
+    100% 6px;
   opacity: 0;
   transform: translateX(-100%);
 }
@@ -419,16 +517,37 @@ a {
 
 .news-article-shell {
   background:
-    radial-gradient(circle at 88% 30%, rgba(125, 47, 45, 0.12), transparent 22rem),
-    radial-gradient(circle at 12% 72%, rgba(82, 102, 90, 0.14), transparent 24rem),
+    radial-gradient(
+      circle at 88% 30%,
+      rgba(125, 47, 45, 0.12),
+      transparent 22rem
+    ),
+    radial-gradient(
+      circle at 12% 72%,
+      rgba(82, 102, 90, 0.14),
+      transparent 24rem
+    ),
     #070807;
 }
 
 .article-image-breach {
   background:
-    radial-gradient(circle at 58% 42%, rgba(213, 155, 76, 0.22), transparent 18rem),
-    radial-gradient(circle at 76% 66%, rgba(82, 102, 90, 0.2), transparent 16rem),
-    linear-gradient(90deg, transparent, rgba(213, 155, 76, 0.08) 42%, transparent);
+    radial-gradient(
+      circle at 58% 42%,
+      rgba(213, 155, 76, 0.22),
+      transparent 18rem
+    ),
+    radial-gradient(
+      circle at 76% 66%,
+      rgba(82, 102, 90, 0.2),
+      transparent 16rem
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(213, 155, 76, 0.08) 42%,
+      transparent
+    );
   mix-blend-mode: screen;
   animation: portal-flash 14s steps(1, end) infinite;
 }
@@ -441,7 +560,9 @@ a {
   background:
     linear-gradient(90deg, transparent, rgba(226, 215, 189, 0.08), transparent),
     linear-gradient(rgba(226, 215, 189, 0.08) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 7px;
+  background-size:
+    100% 100%,
+    100% 7px;
   box-shadow:
     inset 0 0 4rem rgba(213, 155, 76, 0.08),
     0 0 4rem rgba(125, 47, 45, 0.12);
@@ -479,15 +600,18 @@ a {
 }
 
 .article-body strong {
-  color: #d59b4c;
-  font-weight: 600;
+  color: #fff3d4;
+  font-weight: 700;
+  text-shadow: 0 0 18px rgba(213, 155, 76, 0.18);
 }
 
 .article-body a {
   color: #d59b4c;
+  font-weight: 900;
   text-decoration: underline;
   text-decoration-color: rgba(213, 155, 76, 0.34);
   text-underline-offset: 0.25em;
+  text-decoration-thickness: 1px;
   transition: color 200ms ease;
 }
 
