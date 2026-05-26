@@ -15,6 +15,9 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
   title: "Queen Raida",
   description: "Raid Guild's Autonomous Queen",
 };
