@@ -12,8 +12,8 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-charcoal text-ivory">
       <AmbientFrame />
       <HeroChamber />
-      <CrossedWires />
       <TransmissionLayer />
+      <CrossedWires />
       <NewsIndex />
       <HistoryArchive />
       <ExternalPortals />
