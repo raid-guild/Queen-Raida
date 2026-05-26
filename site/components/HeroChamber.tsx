@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const transmissions = [
-  "Motion layer online.",
-  "Still tuning the room.",
-  "Still learning the tempo.",
-  "The guild machinery is awake.",
+  "WIRE ROUTE CONFLICT",
+  "YOU ARE NOT IN THE RIGHT ROOM",
+  "QUEEN SIGNAL BLEEDING THROUGH",
+  "REALITY BUS REASSIGNED",
 ];
 
 export function HeroChamber() {
@@ -19,20 +19,22 @@ export function HeroChamber() {
         className="hero-image object-cover object-center"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,8,7,0.02),rgba(7,8,7,0.12)_56%,rgba(7,8,7,0.62)),linear-gradient(90deg,rgba(7,8,7,0.58),rgba(7,8,7,0.14)_45%,rgba(7,8,7,0.18))]" />
+      <div className="portal-flash absolute inset-0" />
       <div className="fog-layer absolute inset-x-[-15%] bottom-[-8%] h-1/2 opacity-35" />
       <div className="cable-field absolute inset-x-0 top-0 h-40 opacity-40" />
+      <div className="wire-shadow absolute inset-0 opacity-50" />
 
-      <div className="relative z-10 max-w-4xl">
+      <div className="hero-glitch-shell relative z-10 max-w-4xl">
         <p className="mb-5 font-mono text-[0.68rem] uppercase tracking-[0.34em] text-amber md:text-xs">
-          Signal chamber / phase one
+          Signal chamber / crossed phase
         </p>
-        <h1 className="font-serif text-7xl font-semibold leading-[0.82] text-ivory drop-shadow-[0_0_28px_rgba(213,155,76,0.16)] md:text-9xl lg:text-[10.5rem]">
+        <h1 className="glitch-text font-serif text-7xl font-semibold leading-[0.82] text-ivory drop-shadow-[0_0_28px_rgba(213,155,76,0.16)] md:text-9xl lg:text-[10.5rem]" data-text="Queen Raida">
           Queen Raida
         </h1>
         <p className="mt-5 max-w-xl font-mono text-sm uppercase tracking-[0.28em] text-ivory-dim md:mt-7 md:text-base">
           Raid Guild&apos;s Autonomous Queen
         </p>
-        <div className="mt-10 h-10 overflow-hidden border-l border-amber/45 pl-4 font-mono text-xs uppercase tracking-[0.24em] text-amber/80 md:text-sm">
+        <div className="mt-10 h-10 overflow-hidden border-l border-amber/45 bg-charcoal/20 pl-4 font-mono text-xs uppercase tracking-[0.24em] text-amber/80 md:text-sm">
           <div className="transmission-cycle">
             {transmissions.map((line) => (
               <p key={line} className="h-10">
