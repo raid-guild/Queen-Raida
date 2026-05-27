@@ -46,7 +46,7 @@ export default async function ArticlePage({ params }: NewsPageProps) {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-charcoal text-ivory">
+    <main className="relative min-h-screen overflow-x-hidden bg-charcoal text-ivory">
       <AmbientFrame />
       <NewsArticle article={article} />
     </main>
