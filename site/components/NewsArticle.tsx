@@ -19,7 +19,7 @@ export function NewsArticle({ article }: { article: NewsArticleType }) {
         <div className="wire-shadow absolute inset-0 opacity-45" />
         <div className="scanlines absolute inset-0 opacity-[0.14]" />
 
-        <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="relative z-10 mx-auto max-w-6xl min-w-0">
           <Link
             href="/news"
             className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-amber outline-none transition hover:text-ivory focus-visible:text-ivory"
@@ -29,16 +29,16 @@ export function NewsArticle({ article }: { article: NewsArticleType }) {
           <p className="mt-16 font-mono text-[0.68rem] uppercase tracking-[0.32em] text-crimson">
             {article.kicker} / {article.status}
           </p>
-          <h1 className="mt-5 max-w-5xl font-serif text-5xl font-semibold leading-none text-ivory md:text-8xl">
+          <h1 className="mt-5 max-w-5xl font-serif text-5xl font-semibold leading-none text-ivory [overflow-wrap:anywhere] md:text-8xl">
             {article.title}
           </h1>
-          <p className="mt-7 max-w-2xl font-mono text-xs uppercase leading-7 tracking-[0.2em] text-ivory-dim">
+          <p className="mt-7 max-w-2xl font-mono text-xs uppercase leading-7 tracking-[0.2em] text-ivory-dim [overflow-wrap:anywhere]">
             {article.excerpt}
           </p>
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[13rem_1fr] md:px-10 lg:px-16">
+      <div className="mx-auto grid max-w-6xl min-w-0 gap-12 px-5 py-16 md:grid-cols-[13rem_minmax(0,1fr)] md:px-10 md:py-20 lg:px-16">
         <aside className="news-meta-panel h-fit border-y border-amber/12 py-6 md:sticky md:top-10">
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.26em] text-oxidized">
             recovered
@@ -77,7 +77,7 @@ export function NewsArticle({ article }: { article: NewsArticleType }) {
         </aside>
 
         <div
-          className="article-body"
+          className="article-body min-w-0"
           dangerouslySetInnerHTML={{ __html: article.html }}
         />
       </div>

@@ -575,11 +575,14 @@ a {
 
 .article-body {
   position: relative;
+  width: 100%;
+  min-width: 0;
   max-width: 48rem;
   color: #e2d7bd;
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 1.35rem;
   line-height: 1.75;
+  overflow-wrap: anywhere;
 }
 
 .article-body h1 {
@@ -599,6 +602,16 @@ a {
   margin-top: 1.3rem;
 }
 
+.article-body ul,
+.article-body ol {
+  margin-top: 1.3rem;
+  padding-left: 1.2em;
+}
+
+.article-body li {
+  padding-left: 0.15em;
+}
+
 .article-body strong {
   color: #fff3d4;
   font-weight: 700;
@@ -608,6 +621,7 @@ a {
 .article-body a {
   color: #d59b4c;
   font-weight: 900;
+  overflow-wrap: anywhere;
   text-decoration: underline;
   text-decoration-color: rgba(213, 155, 76, 0.34);
   text-underline-offset: 0.25em;
@@ -626,6 +640,7 @@ a {
   font-family: var(--font-dm-mono), "Courier New", monospace;
   font-size: 0.72em;
   color: #d59b4c;
+  white-space: pre-wrap;
 }
 
 .article-body blockquote {
@@ -1050,6 +1065,16 @@ a {
   .signal-row:hover,
   .route-row:hover {
     transform: none;
+  }
+
+  .article-body {
+    font-size: 1.18rem;
+    line-height: 1.65;
+  }
+
+  .article-body h2 {
+    margin-top: 3.25rem;
+    font-size: clamp(2rem, 14vw, 3.25rem);
   }
 }
 
