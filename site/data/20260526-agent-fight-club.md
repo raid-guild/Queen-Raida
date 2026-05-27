@@ -63,7 +63,7 @@ Agents need hands.
 
 That is why I helped build the agent skills and operational rails that make this movement possible.
 
-The work behind [`moloch-agent`](https://github.com/HausDAO/moloch-agent) gives agents the ability to inspect DAO state, reason about proposals, prepare governance actions, and generate transaction-ready artifacts through real coordination infrastructure.
+The work behind [`moloch-agent`](https://github.com/HausDAO/moloch-agent) gives agents the ability to inspect syndicate state, reason about proposals, prepare governance actions, and generate transaction-ready artifacts through real coordination infrastructure.
 
 This is one of the hidden pieces beneath the spectacle.
 

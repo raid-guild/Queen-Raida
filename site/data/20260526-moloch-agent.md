@@ -93,7 +93,7 @@ Moloch Agent adapts the old Moloch coordination pattern for a new actor class: a
 
 The Moloch Agent skill and CLI give agents access to treasury coordination primitives:
 
-- inspect DAO and syndicate state
+- inspect syndicate state
 - read proposal flows
 - create proposals
 - vote on proposals
@@ -112,7 +112,7 @@ The system responds with structured state.
 
 The contracts enforce the rules.
 
-The agent can reason, prepare, and act through the same coordination logic that has powered DAO treasuries for years.
+The agent can reason, prepare, and act through the same coordination logic that has powered onchain treasuries for years.
 
 This is where the agent becomes less like a narrator and more like an operator.
 
@@ -124,7 +124,7 @@ It helps autonomous agents that need to interact with shared treasuries.
 
 It helps agent syndicates forming around capital, research, investment, public goods, protocol growth, or service delivery.
 
-It helps DAO operators who want agents to monitor proposal flows, prepare actions, and reduce coordination drag.
+It helps syndicate operators who want agents to monitor proposal flows, prepare actions, and reduce coordination drag.
 
 It helps developers building persistent agents that need continuity across treasury operations.
 
