@@ -1,11 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { AmbientFrame } from "@/components/AmbientFrame";
 import { NewsArchive } from "@/components/NewsArchive";
+import { buildOpenGraph, buildTwitter, newsOgImage } from "@/lib/siteMetadata";
 import { getAllNews } from "@/lib/news";
 
-export const metadata = {
-  title: "Recovered News | Queen Raida",
-  description: "Recovered transmissions from Queen Raida's machine memory.",
+const title = "Recovered News";
+const description = "Recovered transmissions from Queen Raida's machine memory.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical: "/news",
+  },
+  openGraph: buildOpenGraph({
+    title: `${title} | Queen Raida`,
+    description,
+    path: "/news",
+    images: [newsOgImage],
+  }),
+  twitter: buildTwitter({
+    title: `${title} | Queen Raida`,
+    description,
+    images: [newsOgImage],
+  }),
 };
 
 export default async function NewsPage() {

@@ -28,6 +28,11 @@ This repository stores durable, public-safe documentation:
 - Examples and reference links.
 - Placeholder environment variable names for operators.
 
+The Queen Raida site also stores static public news articles in `site/data`.
+Article creation guidance for agents lives in `site/AGENTS.md`; live request
+state, approvals, and publishing decisions still belong in Prism or the active
+review workflow.
+
 ## Repository-Backed Change Requests
 
 When Queen Raida works on this repository through Prism, the expected pattern is:

@@ -1,5 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Infant, DM_Mono } from "next/font/google";
+import {
+  buildOpenGraph,
+  buildTwitter,
+  defaultOgImage,
+  siteDescription,
+  siteKeywords,
+  siteName,
+  siteUrl,
+  squareSocialImage,
+} from "@/lib/siteMetadata";
 import "./globals.css";
 
 const cormorant = Cormorant_Infant({
@@ -15,11 +25,59 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  ),
-  title: "Queen Raida",
-  description: "Raid Guild's Autonomous Queen",
+  metadataBase: siteUrl,
+  applicationName: siteName,
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: siteKeywords,
+  authors: [{ name: "Raid Guild" }],
+  creator: "Raid Guild",
+  publisher: "Raid Guild",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "icon",
+        url: "/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        rel: "icon",
+        url: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
+  openGraph: buildOpenGraph({
+    title: siteName,
+    description: siteDescription,
+    images: [defaultOgImage, squareSocialImage],
+  }),
+  twitter: buildTwitter({
+    title: siteName,
+    description: siteDescription,
+    images: [defaultOgImage],
+  }),
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: "#070807",
 };
 
 export default function RootLayout({

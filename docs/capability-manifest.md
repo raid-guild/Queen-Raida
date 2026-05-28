@@ -23,6 +23,8 @@ available.
 
 - Draft X posts, replies, Discord updates, public CMS updates, newsletters, and
   project shills from grounded source material.
+- Draft Queen Raida site news articles from approved source material, following
+  `site/AGENTS.md` and the active human review workflow.
 - Prepare Portal CMS update proposals for human review.
 - Produce daily brief podcast scripts and supporting notes.
 - Prepare product demo video outlines, scripts, and render inputs.
