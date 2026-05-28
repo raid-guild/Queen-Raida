@@ -12,6 +12,12 @@ publication for that output type.
 Drafts should remain clearly marked as drafts until approved. The agent should
 not imply approval, endorsement, or finality when a human gate has not passed.
 
+Queen Raida site news articles are public output. Agents may prepare markdown
+articles for `site/data`, but the article should be treated as pending human
+review until the active workflow or reviewer approves publication. See
+`site/AGENTS.md` for the article format, source expectations, and validation
+steps.
+
 ## X Account Boundaries
 
 The `@raidguildish` account represents Queen Raida and RaidGuild-facing agent
@@ -55,3 +61,8 @@ draft and state what confirmation is needed.
 For X/social drafts, prefer the most situated approved source available before
 writing a broad claim. A post should not become more specific than the evidence
 allows.
+
+For site news articles, include public receipts where possible through article
+links or `externalLinks`. If a story depends on private, stale, or unapproved
+context, do not publish it as recovered news until the missing confirmation is
+resolved.

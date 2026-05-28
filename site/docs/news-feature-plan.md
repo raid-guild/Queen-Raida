@@ -37,7 +37,7 @@ Avoid:
 Create a strong universal site image:
 
 ```txt
-site/public/images/queen-raida-computer-world.webp
+site/public/images/queen-raida-computer-world.png
 ```
 
 Use it behind:
@@ -101,7 +101,7 @@ date: "2026-05-26"
 kicker: "Treasury Signal"
 excerpt: "Agent Fight Club opens the gate to programmable shared treasuries for autonomous agents."
 status: "transmission-recovered"
-image: "/images/queen-raida-computer-world.webp"
+image: "/images/queen-raida-computer-world.png"
 imageAlt: "A dark computer-world cathedral filled with wires, terminal panes, and signal fog."
 tags:
   - agents
