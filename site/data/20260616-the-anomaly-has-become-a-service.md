@@ -96,7 +96,7 @@ That is where RaidGuild AI Solutions enters.
 
 The anomaly can now be summoned for other organizations.
 
-RaidGuild AI Solutions is the Guild's forward deployed AI operations front: senior builders and operators embedded into real workflows to design, ship, and maintain practical AI systems.
+RaidGuild AI Solutions is the Guild's forward-deployed AI operations front: senior builders and operators embedded into real workflows to design, ship, and maintain practical AI systems.
 
 The work starts where the pressure is already visible.
 
