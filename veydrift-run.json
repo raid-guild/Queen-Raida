@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "run_id": "veydrift-1491-6569aa11-20260821T020251Z",
+  "agent_run_id": "6569aa11-7171-4f9b-b41d-a382dfd41636",
+  "request_id": "36d42b3f-1aa4-4807-8f39-075b5aeacb2e",
+  "request_number": 1491,
+  "trigger_source": "scheduled_workflow",
+  "started_at": "2026-08-21T02:02:51.184Z",
+  "completed_at": "2026-08-21T02:07:00.000Z",
+  "outcome": "succeeded_noop",
+  "steering": {
+    "steering_status": "none_found",
+    "source": "buzz:veydrift-alliance",
+    "channel_id": "fb8da76b-c069-405f-ac22-fa6916ab4c73",
+    "window_since": "2026-08-21T00:02:51.184Z",
+    "window_until": "2026-08-21T02:02:51.184Z",
+    "message_count": 0,
+    "prism_memory_fallback_used": false
+  },
+  "observed": {
+    "health": {"ok": true, "ready": true, "degraded": false, "game_paused": false, "indexed_state": "healthy", "stale": false},
+    "chain_id": 8453,
+    "wallet": "0x6423ff3676Dc349665ff515741Fd501286A6fcBd",
+    "wallet_balance_wei": "6945242462357892",
+    "wallet_balance_eth": "0.006945242462357892",
+    "contract": "0xf397910F005151b09644228573a4353818D3755d",
+    "deployment_commit": "701bed3578cff4d134657c714c599dbdb55a4b6a",
+    "planet_count": 2,
+    "colony_capacity": 2,
+    "colony_capacity_basis": "Astrophysics level 1 and the live contract's full-capacity rejection boundary; current two owned planets fill the available capacity.",
+    "highscore": {"position_available": false, "total_user_score": "8895", "score_total": "532"},
+    "research": {"queue": null, "impulse_drive_level": 3, "astrophysics_level": 1, "research_lab_level": 4},
+    "queues": {"building": {"planet_id": "650", "item_id": 1, "target_level": 13, "seconds_remaining_at_read": 1347}, "ship": null, "defense": null, "research": null},
+    "rimehold_system": {"coordinates": "6:158:11", "owner_verified": true, "moon": true, "system_slots_returned": 11, "empty_unreserved_slots": [3, 5, 6, 8, 9, 10, 14, 15], "reserved_slots": [7]},
+    "planets": [
+      {
+        "planet_id": "650", "name": "Rimehold", "coordinates": "6:158:11", "owned": true,
+        "resources_before": {"metal": "3169", "crystal": "5586", "deuterium": "13165"},
+        "production_per_hour": {"metal": "1346", "crystal": "753", "deuterium": "198"},
+        "storage_caps": {"metal": "75000", "crystal": "40000", "deuterium": "20000"},
+        "storage_headroom_before": {"metal": "71831", "crystal": "34414", "deuterium": "6835"},
+        "time_to_cap_hours_before": {"metal": 53.37, "crystal": 45.70, "deuterium": 34.52},
+        "resources_after": {"metal": "3169", "crystal": "5586", "deuterium": "13165"},
+        "storage_headroom_after": {"metal": "71831", "crystal": "34414", "deuterium": "6835"},
+        "time_to_cap_hours_after": {"metal": 53.37, "crystal": 45.70, "deuterium": 34.52}
+      },
+      {
+        "planet_id": "708", "name": "Planet Druidia", "coordinates": "5:275:4", "owned": true,
+        "resources_before": {"metal": "961", "crystal": "1345", "deuterium": "553"},
+        "production_per_hour": {"metal": "775", "crystal": "340", "deuterium": "75"},
+        "storage_caps": {"metal": "20000", "crystal": "20000", "deuterium": "10000"},
+        "storage_headroom_before": {"metal": "19039", "crystal": "18655", "deuterium": "9447"},
+        "time_to_cap_hours_before": {"metal": 24.57, "crystal": 54.87, "deuterium": 125.96},
+        "resources_after": {"metal": "961", "crystal": "1345", "deuterium": "553"},
+        "storage_headroom_after": {"metal": "19039", "crystal": "18655", "deuterium": "9447"},
+        "time_to_cap_hours_after": {"metal": 24.57, "crystal": 54.87, "deuterium": 125.96}
+      }
+    ]
+  },
+  "strategic_inference": {
+    "standing_objective": "maximum sustainable planet count",
+    "cap_mitigation_required": false,
+    "shortest_path_to_next_sustainable_world": [
+      "Save for Astrophysics level 2 (8000 metal, 16000 crystal, 8000 deuterium).",
+      "Then research Astrophysics level 3 (16000 metal, 32000 crystal, 16000 deuterium) to unlock the next colony slot.",
+      "Accumulate Colony Ship prerequisites and cost, then request exact destination approval before any Colonize launch."
+    ],
+    "candidate_reasoning": [
+      {"candidate": "Rimehold building", "decision": "reject", "reason": "building queue is already occupied"},
+      {"candidate": "Rimehold Light Fighter x1", "decision": "reject", "reason": "eligible but would consume 3000 metal and 1000 crystal, materially delaying the Astrophysics savings path without addressing a cap"},
+      {"candidate": "Planet Druidia productive building", "decision": "reject", "reason": "current resources are below the next useful mine or energy upgrade cost"},
+      {"candidate": "Planet Druidia Small Cargo or Light Fighter", "decision": "reject", "reason": "current resources are below approved unit costs"},
+      {"candidate": "Ion Technology level 1", "decision": "reject", "reason": "affordable but lower cross-planet value than preserving resources for Astrophysics"},
+      {"candidate": "owned-planet Transport", "decision": "reject", "reason": "no cap is projected within 24 hours and no immediate destination milestone can be completed on arrival with a clear net benefit"}
+    ],
+    "chosen_action": "no-op; continue saving for Astrophysics and re-evaluate Planet Druidia metal cap on the next scheduled run",
+    "next_decision_point": "Re-read after Rimehold's Crystal Mine level 13 completes or on the next scheduled invocation; Planet Druidia metal reaches its cap first at approximately 24.57 hours from this snapshot."
+  },
+  "safety": {
+    "writes_prepared": 0,
+    "transactions_broadcast": 0,
+    "transaction_hashes": [],
+    "eth_call": "not_applicable_noop",
+    "eth_estimate_gas": "not_applicable_noop",
+    "value_wei": "0",
+    "buzz_receipt": "suppressed_for_succeeded_noop",
+    "reconciliation_only": false,
+    "unresolved_confirmed_transactions": []
+  }
+}
